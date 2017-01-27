@@ -1,6 +1,7 @@
 use std::io;
 use std::io::prelude::*;
-use unix_socket::UnixStream;
+// # use unix_socket::UnixStream;
+use std::os::unix::net::UnixStream;
 
 use self::Command::*;
 
@@ -93,7 +94,7 @@ pub mod reply {
 /// Socket that communicates with the SAMD21.
 pub struct PortSocket {
     _socket_path: String,
-    socket: UnixStream,
+    pub socket: UnixStream,
 }
 
 impl PortSocket {

@@ -81,7 +81,7 @@ impl Tessel {
 /// use tessel::Port;
 /// ```
 pub struct Port {
-    socket: Arc<Mutex<PortSocket>>,
+    pub socket: Arc<Mutex<PortSocket>>,
 }
 
 impl Port {
